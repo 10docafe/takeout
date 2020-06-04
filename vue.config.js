@@ -3,7 +3,7 @@ module.exports = {
     "vuetify"
   ],
 
-  publicPath: '/takeout_form/',
+  publicPath: '/takeout/',
   outputDir: 'docs'
 
 }
