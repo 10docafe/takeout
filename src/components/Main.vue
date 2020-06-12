@@ -25,13 +25,15 @@
               <v-radio label="野菜たっぷりタコライス" value="タコライス"></v-radio>
             </v-row>
             <v-img src="../assets/taco.jpg"></v-img>
-            <v-card-text>¥8,00</v-card-text>
+            <v-card-text>¥800</v-card-text>
           </v-card>
 
-          <v-card class="mt-2 mb-2 pt-3 pb-3">
-            <v-row justify="center">
-              <v-radio label="チーズたっぷりタコライス ¥850" value="チーズタコライス"></v-radio>
+          <v-card class="mt-2 mb-2">
+            <v-row justify="center" class="mb-4 mt-4">
+              <v-radio label="チーズたっぷりタコライス" value="チーズタコライス"></v-radio>
             </v-row>
+            <v-img src="../assets/cheesetaco.png"></v-img>
+            <v-card-text>¥850</v-card-text>
           </v-card>
         </v-radio-group>
 
