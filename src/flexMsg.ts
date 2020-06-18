@@ -30,13 +30,13 @@ export const flexMsg = {
             "type": "box",
             "layout": "horizontal",
             "contents": [
-                {
+                /*{
                     "type": "text",
                     "text": "name",
                     "weight": "regular",
                     "size": "sm",
                     "color": "#AAAAAA"
-                }, {
+                },*/ {
                     "type": "text",
                     "text": "ご注文内容",
                     "size": "sm",

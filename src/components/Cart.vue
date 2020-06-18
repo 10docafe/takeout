@@ -227,13 +227,25 @@ export default Vue.extend({
     }
   },
   methods: {
-    createMsg(data: Msg) {
+    async createMsg(data: Msg) {
       //名前の表示
-      liff
+      await liff
         .getProfile()
         .then(profile => {
           const name = profile.displayName;
-          flexMsg.contents.header.contents[0].text = `${name}様`;
+          liff
+            .sendMessages([
+              {
+                type: "text",
+                text: `${name}様ご注文ありがとうございます。`
+              }
+            ])
+            .then(() => {
+              console.log("message sent");
+            })
+            .catch(err => {
+              console.log("error", err);
+            });
         })
         .catch(err => {
           flexMsg.contents.header.contents[0].text = `${JSON.stringify(err)}様`;
