@@ -236,7 +236,7 @@ export default Vue.extend({
           flexMsg.contents.header.contents[0].text = `${name}様`;
         })
         .catch(err => {
-          console.log("error", err);
+          flexMsg.contents.header.contents[0].text = `${JSON.stringify(err)}様`;
         });
 
       //値段の表示
