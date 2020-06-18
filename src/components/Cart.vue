@@ -227,9 +227,9 @@ export default Vue.extend({
     }
   },
   methods: {
-    async createMsg(data: Msg) {
+    createMsg(data: Msg) {
       //名前の表示
-      await liff
+      liff
         .getProfile()
         .then(profile => {
           const name = profile.displayName;
