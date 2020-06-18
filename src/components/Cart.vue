@@ -227,7 +227,18 @@ export default Vue.extend({
     }
   },
   methods: {
-    createMsg(data: Msg) {
+    async createMsg(data: Msg) {
+      //名前の表示
+      await liff
+        .getProfile()
+        .then(profile => {
+          const name = profile.displayName;
+          flexMsg.contents.header.contents[0].text = `${name}様`;
+        })
+        .catch(err => {
+          console.log("error", err);
+        });
+
       //値段の表示
       flexMsg.contents.body.contents[6].contents![2].text = `${data.price}円`;
 
