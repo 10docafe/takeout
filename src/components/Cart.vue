@@ -227,7 +227,7 @@ export default Vue.extend({
     }
   },
   methods: {
-    async createMsg(data: Msg) {
+    async sendName() {
       //名前の表示
       await liff
         .getProfile()
@@ -250,7 +250,8 @@ export default Vue.extend({
         .catch(err => {
           flexMsg.contents.header.contents[0].text = `${JSON.stringify(err)}様`;
         });
-
+    },
+    createMsg(data: Msg) {
       //値段の表示
       flexMsg.contents.body.contents[6].contents![2].text = `${data.price}円`;
 
@@ -301,7 +302,8 @@ export default Vue.extend({
         });
       }
     },
-    sendMessages(data: Msg) {
+    async sendMessages(data: Msg) {
+      await this.sendName();
       //JSONに送信データを追加
       this.createMsg(data);
       console.log(flexMsg);
