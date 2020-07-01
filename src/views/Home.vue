@@ -4,6 +4,8 @@
       <v-row justify="center">
         <v-col cols="9">
           <h1 class="text-center">10°TAKEOUT</h1>
+          <h4 class="text-center mt-5">大変申し訳ありませんが、ただいま利用を停止しております。</h4>
+          <!--
           <v-row justify="center">
             <v-col cols="8">
               <h3 class="text-center mt-4">ご使用方法</h3>
@@ -17,9 +19,10 @@
             </ol>
           </v-row>
           <p></p>
+          -->
         </v-col>
       </v-row>
-
+      <!--
       <v-container>
         <v-row justify="center">
           <v-col cols="12">
@@ -29,21 +32,27 @@
               </v-tabs>
 
               <v-tabs-items v-model="tab">
-                <!--メイン-->
+      -->
+      <!--メイン-->
+      <!--
                 <v-tab-item>
                   <v-card flat>
                     <Main @addItem="addMain"></Main>
                   </v-card>
                 </v-tab-item>
+      -->
 
-                <!--サイド-->
+      <!--サイド-->
+      <!--
                 <v-tab-item>
                   <v-card flat>
                     <Side @addSide="addSide"></Side>
                   </v-card>
                 </v-tab-item>
+      -->
 
-                <!--ドリンク-->
+      <!--ドリンク-->
+      <!--
                 <v-tab-item>
                   <v-card flat>
                     <Drink :drinks="drinkData" @addDrink="addDrink"></Drink>
@@ -55,16 +64,17 @@
         </v-row>
       </v-container>
       <Cart @err="catchErr" :mainsProp="mains" :sidesProp="sides" :drinksProp="drinks"></Cart>
+      -->
     </main>
   </v-app>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import Main from "../components/Main.vue";
-import Drink from "../components/Drink.vue";
-import Side from "../components/Side.vue";
-import Cart from "../components/Cart.vue";
+// import Main from "../components/Main.vue";
+// import Drink from "../components/Drink.vue";
+// import Side from "../components/Side.vue";
+// import Cart from "../components/Cart.vue";
 
 import { drinkData } from "../db/drink";
 
@@ -100,7 +110,7 @@ interface Data {
 
 export default Vue.extend({
   name: "Home",
-  components: { Main, Drink, Side, Cart },
+  // components: { Main, Drink, Side, Cart },
   data(): Data {
     return {
       tab: "tab",
