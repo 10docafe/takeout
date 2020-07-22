@@ -21,7 +21,7 @@
           </v-row>
           <v-img src="../assets/cheesepoteto.jpg"></v-img>
         </v-card>
-
+        <!--
         <v-card class="mt-2 mb-2 pa-4">
           <v-row justify="center">
             <v-col cols="3" offset="8">
@@ -31,7 +31,7 @@
           </v-row>
           <v-img src="../assets/honey.jpg"></v-img>
         </v-card>
-
+        -->
       </v-col>
     </v-row>
   </v-container>
